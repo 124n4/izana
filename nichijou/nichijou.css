@@ -2,7 +2,6 @@ body{
     background-color:#f5f5f5;
     color:black;
     padding: 3px 5px;
-    margin:0;
 }
 
 header{
@@ -40,7 +39,7 @@ header h2{
 }
 
 #diary_list ul li{
-    background-color: #EEEEFF;
+    background-color: #d4f4f2;
     list-style: none;
     display: block;  
     float: left;
@@ -68,8 +67,17 @@ header h2{
 }
 
 #diary_list ul li a:hover{
-    color: #0000FF;
-    background-color: #9999FF;
+    color: #1f7872;
+    background-color: #99e5df;
+}
+
+#diary_contents{
+    margin: 0 auto;
+}
+
+#diary_contents article.diary{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #diary_contents p{
@@ -77,8 +85,16 @@ header h2{
 }
 
 #diary_contents h3.date{
+    background-color: #99e5df;
     color: #000000;
-    border-left: solid 0.6em #2aa198;
+    font-size: 16px;
+    border-left: solid 0.5em #2aa198;
     border-bottom: solid 1px;
     padding: 0 0.5em;
+}
+
+@media (min-width: 720px){
+    #diary_contents{
+        width: 720px;
+    }
 }

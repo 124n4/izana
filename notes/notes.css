@@ -2,7 +2,6 @@ body{
     background-color:#f5f5f5;
     color:black;
     padding: 3px 5px;
-    margin:0;
 }
 
 header{
@@ -24,4 +23,14 @@ ul li{
 ul li ul li{
     color: #666666;
     font-size:15px;
+}
+
+#notes_list{
+    margin: 0 auto;
+}
+
+@media (min-width: 720px){
+    #notes_list{
+        width: 720px;
+    }
 }
