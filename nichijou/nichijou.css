@@ -72,6 +72,10 @@ header h2{
     background-color: #9999FF;
 }
 
+#diary_contents p{
+    font-family: serif;
+}
+
 #diary_contents h3.date{
     color: #000000;
     border-left: solid 0.6em #2aa198;

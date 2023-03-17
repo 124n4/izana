@@ -1,0 +1,98 @@
+\documentclass[a4paper,10pt,uplatex]{jsarticle}
+
+
+% 数式
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage[thicklines]{cancel}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{here}
+\usepackage{tikz}
+\usepackage{enumitem}
+% \setlist{nolistsep}
+
+\newcommand{\Set}[1]{\{#1\}}
+\newcommand{\miss}{\textcolor{red}{\#}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\inv}[1]{{(#1)}^{-1}}
+\newcommand{\Mod}{\text{mod}\;}
+\newcommand{\End}{\text{End}}
+\newcommand{\Ker}{\text{Ker}\;}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\transpose}[1]{^t\! #1}
+
+\numberwithin{equation}{section}
+
+\newtheoremstyle{mystyle}%
+    {5pt}%
+    {5pt}%
+    {}%
+    {\parindent}%
+    {\bfseries}%
+    {:}%
+    { }%
+    {}%
+\theoremstyle{mystyle}
+\newtheorem{dfn}{定義}[section]
+\newtheorem{thm}{定理}[section]
+\newtheorem{lem}[thm]{補題}
+\newtheorem{cor}[thm]{系}
+\renewcommand{\proofname}{\textbf{証明}}
+
+% 数式の上下のスペースの変更
+\AtBeginDocument{
+  \abovedisplayskip     =0.5\abovedisplayskip
+  \abovedisplayshortskip=0.5\abovedisplayshortskip
+  \belowdisplayskip     =0.5\belowdisplayskip
+  \belowdisplayshortskip=0.5\belowdisplayshortskip
+}
+
+\begin{document}
+
+\title{池田「テンソル代数と表現論」}
+\author{}
+\date{\today}
+\maketitle
+
+課題の解答例．
+\section{広義固有区間}
+\begin{itemize}
+    \item[1.1] $A^m = E$より，$f(t) = t^m - 1$は$f(A) = 0$をみたす．
+    \begin{equation}
+        f(t) = \prod_{k=0}^{m-1}(t-e^{2\pi i k/m})
+    \end{equation}
+    である．最小多項式は$f$を割り切るので，$f$の右辺のどの項も高々1回しか現れない，つまり重根を持たない．したがって定理1.2.6より$A$は対角化できる．
+\end{itemize}
+
+\section{ジョルダン標準形}
+
+\section{行列の指数関数とその応用}
+
+\section{テンソル代数}
+\begin{itemize}
+    \item [4.1] $\transpose{f}$の表現行列を$B$とする．
+    \begin{equation}
+        \langle \transpose{f}(\psi_i),v_j \rangle = \langle \sum_{k} b_{ki}\phi_k, v_j \rangle = \sum_{k} b_{ki}\delta_{jk} = b_{ji}
+    \end{equation}
+    と
+    \begin{equation}
+        \langle \transpose{f}(\psi_i),v_j \rangle = \psi_i(f(v_j)) = \psi_i \left(\sum_{k} a_{kj} w_k\right) = \sum_{k} a_{kj}\delta_{ik} = a_{ij}
+    \end{equation}
+    より，$b_{ji} = a_{ij}$．したがって$B = \transpose{A}$．
+
+    \item[4.2(1)] $\psi \in  W^*$の定義域を$V$に拡張すれば$V^*$の元になる．それには$\psi(v_{r+1}), \cdots, \psi(v_n)$を設定して，線型に拡張すればよい．したがって$\Phi : W^* \to V^*$は全射．
+    \item[4.2(2)] $\bar{\Psi}$を$\phi + W^{\perp} \mapsto \phi|_W$と定義すればwell-definedな線型写像になる．
+    \item[4.2(3)] $\dim (V^*/W^{\perp}) = n - \dim W^{\perp} = n - (n - r) = r = \dim W^*$より$\bar{\Psi}$は全射．(2)より単射でもあるから，線型同型．
+\end{itemize}
+
+\end{document}
