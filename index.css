@@ -34,8 +34,15 @@ h2{
     margin: 0 auto;
 }
 
+#links{
+    margin: 0 auto;
+}
+
 @media (min-width: 720px){
     #introduction{
+        width: 720px;
+    }
+    #links{
         width: 720px;
     }
 }
