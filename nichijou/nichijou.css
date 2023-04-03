@@ -37,11 +37,18 @@ header h2{
     display: flex;
     justify-content: center;
     margin-top: 0;
+    margin-bottom: 0;
     /*
     margin-bottom:0;
     padding-left:0;
     padding-bottom:0;
     */
+}
+
+#diary_list ul::after{
+    content:"";
+    display:block;
+    clear:both;
 }
 
 #diary_list ul li{
@@ -55,10 +62,17 @@ header h2{
     justify-content: center;
 }
 
-#diary_list ul::after{
-    content:"";
-    display:block;
-    clear:both;
+#diary_list ul li.work_log{
+     /* background-color: #7fffd4; */
+    background-color: #d4f4f2;
+    list-style: none;
+    display: block;  
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    width: 70px;
+    justify-content: center;
+    margin-top:0;
 }
 
 #diary_list ul li.no_entry{
@@ -91,16 +105,32 @@ header h2{
 }
 
 #diary_contents h3.date{
-    background-color: #99e5df;
+    background-color: #deb887;
     color: #000000;
     font-size: 16px;
-    border-left: solid 0.5em #2aa198;
+    border-left: solid 0.5em #de7e00;
+    border-bottom: solid 1px;
+    padding: 0 0.5em;
+}
+
+#log_contents{
+    margin: 0 auto;
+}
+
+#log_contents h3.date{
+    background-color: #deb887;
+    color: #000000;
+    font-size: 16px;
+    border-left: solid 0.5em #de7e00;
     border-bottom: solid 1px;
     padding: 0 0.5em;
 }
 
 @media (min-width: 720px){
     #diary_contents{
+        width: 720px;
+    }
+    #log_contents{
         width: 720px;
     }
 }
