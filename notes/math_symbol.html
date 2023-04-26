@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>数学で使う記号 | 宇宙よりも広い場所</title>
+        <meta charset="UTF-8">
+
+        <!-- css -->
+        <link rel="stylesheet" href="notes.css" />
+
+        <script>
+            MathJax = {
+              chtml: {
+                matchFontHeight: false
+              },
+              tex: {
+                inlineMath: [['$', '$']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+              src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>数学で使う記号</h1>       
+            <p style="text-align:center"><a href="./index.html">[ノート一覧へ]</a></p>
+        </header>
+
+        <div id="notes_contents">
+          自分が使っている記号について．
+            <h2>矢印</h2>
+            <ul>
+              <li>全射:$f:A \twoheadrightarrow B$</li>
+              <li>単射:$f:A \rightarrowtail B$</li>
+              <li>全単射:$f: A \;\text{⤖}\; B$
+                <ul><li>全射と単射を組み合わせたもの．TeXのコマンドでは見つからなかった．</li></ul>
+              </li>
+            </ul>
+        </div>
+    </body>
+</html>
